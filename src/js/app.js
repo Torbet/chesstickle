@@ -1,9 +1,10 @@
 let openings;
+let choice;
+let board;
 
 async function pageLoad() {
   await getOpenings()
-  var board = Chessboard('board', 'start')
-  console.log(board)
+  board = Chessboard('board', 'start')
 }
 
 async function getOpenings() {
@@ -15,6 +16,8 @@ function selectOpening() {
   let len = openings.length
   let rand = Math.floor(Math.random() * len)
 
-  let choice = openings[rand]
-  console.log(choice)
+  choice = openings[rand]
+
+  $('#opening-name').html(choice.name)
+  board = Chessboard('board', choice.fen)
 }
