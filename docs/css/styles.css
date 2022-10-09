@@ -6,7 +6,6 @@
 
 body {
   max-width: 740px;
-  width: 740px;
   margin: 0 auto;
   padding: 1em;
 }
@@ -21,6 +20,10 @@ body {
 
 #move-list {
   margin: 1em 0;
+}
+
+#board {
+  max-width: 100%;
 }
 
 button {
