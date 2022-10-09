@@ -20,5 +20,6 @@ function selectOpening() {
   choice = openings[rand]
 
   $('#opening-name').html(choice.name)
+  $('#opening-moves').html(`moves: ${choice.moves}`)
   board = Chessboard('board', choice.fen)
 }
