@@ -8,7 +8,7 @@ async function pageLoad() {
 }
 
 async function getOpenings() {
-  openings = await fetch("https://raw.githubusercontent.com/Torbet/chesstickle/main/src/data/openings.json")
+  openings = await fetch("https://raw.githubusercontent.com/Torbet/chesstickle/main/docs/data/openings.json")
     .then(data => {return data.json()})
 }
 
