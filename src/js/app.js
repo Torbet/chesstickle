@@ -19,7 +19,16 @@ function selectOpening() {
 
   choice = openings[rand]
 
-  $('#opening-name').html(choice.name)
-  $('#opening-moves').html(`moves: ${choice.moves}`)
+  let name = choice.name
+  let i = name.indexOf(name.match(/, \d/))
+  console.log(name)
+  console.log(i)
+
+  if (i != -1) {
+   name = name.slice(0, i)
+  }
+
+  $('#opening-name').html(name)
+  $('#opening-moves').html(choice.moves)
   board = Chessboard('board', choice.fen)
 }

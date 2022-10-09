@@ -11,11 +11,11 @@
   <title>ChessTickle</title>
 </head>
 <body onload="pageLoad()">
-  <h1>ChessTickle</h1>
+  <h1 id="title">ChessTickle</h1>
   <h2 id="opening-name">select opening:</h2>
-  <div id="board" style="width: 400px"></div>
-  <h3 id="opening-moves">moves:</h3>
-  <button onclick="selectOpening()">click</button>
+  <h3 id="move-list">moves: <span id="opening-moves"></span></h3>
+  <div id="board" style="width: 740px"></div>
+  <button onclick="selectOpening()"><h2>Generate Opening</h2></button>
   <script src="js/app.js"></script>
 </body>
 </html>
